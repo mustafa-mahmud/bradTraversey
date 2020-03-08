@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+
+	<!-- font awesome 4.7 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<title>Loan Calculator</title>
+</head>
+
+<body class="bg-dark">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 mx-auto">
+				<div class="card card-body text-center mt-5">
+					<div class="alert alert-danger" role="alert" style="display: none;">
+						Somthing Error Pls Try Again!!!
+					</div>
+					<h3 class="heading display-5 pb-3">Loan Calculator</h3>
+					<!-- FORM -->
+					<form id="loan-form">
+						<!-- loan amount -->
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">$</span>
+							</div>
+							<input type="number" id="amount" class="form-control" placeholder="Loan Amount">
+						</div>
+						<!-- loan interest -->
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">%</span>
+							</div>
+							<input type="number" id="interest" class="form-control" placeholder="Interest">
+						</div>
+						<!-- years -->
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">
+									<i class="fa fa-calendar" aria-hidden="true"></i>
+								</span>
+							</div>
+							<input type="number" id="years" class="form-control" placeholder="Years to Re-pay">
+						</div>
+						<!-- submit -->
+						<div class="form-group">
+							<input type="submit" class="form-control btn btn-dark" value="CALCULATE">
+						</div>
+					</form>
+					<!-- FORM END -->
+
+					<!-- LOADER -->
+					<div id="loading" style="display: none;">
+						<img src="loader.gif" alt="">
+					</div>
+
+					<div id="result" style="display: none;">
+						<h4>Result</h4>
+						<hr style="border-bottom: 1px dotted #000000;">
+						<!-- monthly payment -->
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Monthly Payment</span>
+							</div>
+							<input type="number" id="monthly-payment" class="form-control" disabled>
+						</div>
+						<!-- monthly payment end -->
+
+						<!-- Total Payment -->
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Total Payment</span>
+							</div>
+							<input type="number" id="total-payment" class="form-control" disabled>
+						</div>
+						<!-- Total Payment End -->
+
+						<!-- Total Interest -->
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">Total Interest</span>
+							</div>
+							<input type="number" id="total-interest" class="form-control" disabled>
+						</div>
+						<!-- Total Interest End -->
+
+					</div>
+					<!-- LOADER END -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+	<!-- my app js -->
+	<script src="app.js"></script>
+</body>
+
+</html>
