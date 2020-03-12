@@ -58,3 +58,30 @@ console.log(`My name is ${hello('Mithu', 'Khan').fname} ${hello('Mithu', 'Sorkar
 const names = users.map(cur => cur.length);
 
 console.log(names); */
+
+//ASYNC & AWAIT
+/* async function myFunc() {
+	const promise = new Promise((resolve, reject) => {
+		setTimeout(() => resolve('Hello'), 1000);
+	})
+
+	const res = await promise;
+	return res;
+}
+
+myFunc()
+	.then(res => console.log(res))
+	.catch(err => console.log(err)); */
+
+/* async function getUsers() {
+	//await response of the fetch call
+	const response = await fetch('https://jsonplaceholder.typicode.com/users');
+
+	//when promised is resolved
+	const data = await response.json();
+	return data;
+}
+
+getUsers()
+	.then(user => console.log(user))
+	.catch(err => console.log(err)); */
