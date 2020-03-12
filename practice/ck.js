@@ -1,4 +1,4 @@
-const data = [{
+/* const data = [{
 		title: 'post 1',
 		info: 'post one'
 	},
@@ -30,4 +30,31 @@ function getPost() {
 createPost({
 	title: 'Post 3',
 	info: 'Post Three'
-}, getPost);
+}, getPost); */
+
+//object literal with fat arrow func
+/* const obj = () => ({
+
+	name: 'John'
+});
+console.log(obj().name); */
+
+//single param obj
+/* const hello = name => ({
+	name: name
+});
+console.log(hello('mithu').name); */
+
+//multipale with obj
+/* const hello = (fName, lName) => ({
+	fname: fName,
+	lname: lName
+});
+
+console.log(`My name is ${hello('Mithu', 'Khan').fname} ${hello('Mithu', 'Sorkar').lname}`); */
+
+//fat with map
+/* const users = ['Bob', 'John', 'Doe'];
+const names = users.map(cur => cur.length);
+
+console.log(names); */
