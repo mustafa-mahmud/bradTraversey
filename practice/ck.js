@@ -1,87 +1,52 @@
-/* const data = [{
-		title: 'post 1',
-		info: 'post one'
-	},
-	{
-		title: 'post 2',
-		info: 'post two'
-	},
-];
+//re = /hello/g; //g=global search
 
-//create posts
-function createPost(post, cb) {
-	setTimeout(() => {
-		data.push(post);
-		cb();
-	}, 2000);
-};
+//console.log(re);
+//console.log(re.source);
 
-//get posts
-function getPost() {
-	setTimeout(() => {
-		let output = '';
-		data.forEach(cur => {
-			output += `<li>${cur.title} and ${cur.info}</li>`;
-		});
-		document.body.innerHTML = output;
-	}, 1000);
-};
+//exec()-return array if true, or null
+//const res = re.exec('mithu hello world');
+//console.log(res);
 
-createPost({
-	title: 'Post 3',
-	info: 'Post Three'
-}, getPost); */
 
-//object literal with fat arrow func
-/* const obj = () => ({
+//test()-return true or false
+//const result = re.test('Hello');
+//console.log(result);
 
-	name: 'John'
-});
-console.log(obj().name); */
+//match()-return array or null
+/* const str = 'Hello World!';
+const result = str.match(re);
+console.log(result); */
 
-//single param obj
-/* const hello = name => ({
-	name: name
-});
-console.log(hello('mithu').name); */
+//search()-return index of the first match, if not true then returns -1;
+/* const str = 'Hello World';
+const result = str.search(re);
+console.log(result); */
 
-//multipale with obj
-/* const hello = (fName, lName) => ({
-	fname: fName,
-	lname: lName
-});
+//replace()-return new string
+/* const str = 'Hello World';
+const result = str.replace(re, 'Hi');
+console.log(result); */
 
-console.log(`My name is ${hello('Mithu', 'Khan').fname} ${hello('Mithu', 'Sorkar').lname}`); */
+let re;
+re = /hello/;
+re = /hello/i;
 
-//fat with map
-/* const users = ['Bob', 'John', 'Doe'];
-const names = users.map(cur => cur.length);
+//Metacharacter Symbols
+re = /^h/i;
 
-console.log(names); */
+const str = 'Hello World';
+const result = re.exec(str);
+console.log(result);
 
-//ASYNC & AWAIT
-/* async function myFunc() {
-	const promise = new Promise((resolve, reject) => {
-		setTimeout(() => resolve('Hello'), 1000);
-	})
 
-	const res = await promise;
-	return res;
+function reTest(re, str) {
+	if (re.test(str)) {
+		console.log(`${str} matched ${re.source}`);
+
+	} else {
+		console.log(`${str} done NOT matched ${re.source}`);
+
+	}
 }
 
-myFunc()
-	.then(res => console.log(res))
-	.catch(err => console.log(err)); */
-
-/* async function getUsers() {
-	//await response of the fetch call
-	const response = await fetch('https://jsonplaceholder.typicode.com/users');
-
-	//when promised is resolved
-	const data = await response.json();
-	return data;
-}
-
-getUsers()
-	.then(user => console.log(user))
-	.catch(err => console.log(err)); */
+reTest(re, str);
