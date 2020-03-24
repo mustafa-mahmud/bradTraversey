@@ -430,3 +430,5 @@ const getCurMilliseconds = function () {
 	console.log(`Current Milliseconds: ${new Date().getMilliseconds()}`);
 
 } */
+let b = 10;
+console.log(b);
