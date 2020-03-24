@@ -1,4 +1,3 @@
-//fixme-StorageCtrl
 // Storage Controller
 const StorageCtrl = (function () {
 	//Public mathods
@@ -62,7 +61,6 @@ const StorageCtrl = (function () {
 })();
 
 
-//fixme-ItemCtrl
 // Item Controller
 const ItemCtrl = (function () {
 	// Item Constructor
@@ -175,7 +173,6 @@ const ItemCtrl = (function () {
 })();
 
 
-//fixme-UICtrl
 // UI Controller
 const UICtrl = (function () {
 	const UISelectors = {
@@ -300,7 +297,6 @@ const UICtrl = (function () {
 })();
 
 
-//fixme-App
 // App Controller
 const App = (function (ItemCtrl, UICtrl, StorageCtrl) {
 	// Load event listeners
